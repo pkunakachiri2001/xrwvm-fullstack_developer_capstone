@@ -1,0 +1,31 @@
+Task 5: loginuser endpoint
+curl.exe -s -X POST http://127.0.0.1:8000/djangoapp/login -H "Content-Type: application/json" -d "{\"userName\":\"admin\",\"password\":\"admin_password\"}"
+{"userName": "admin", "status": "Authenticated"}
+
+Task 6: logoutuser endpoint
+curl.exe -s http://127.0.0.1:8000/djangoapp/logout
+{"userName": ""}
+
+Task 8: getdealerreviews
+curl.exe -s http://localhost:3030/fetchReviews/dealer/15
+[{"id": 1, "name": "Berkly Shepley", "dealership": 15, "review": "Total grid-enabled service-desk", "purchase": true, "purchase_date": "07/11/2020", "car_make": "Audi", "car_model": "A6", "car_year": 2010}]
+
+Task 9: getalldealers
+curl.exe -s http://localhost:3030/fetchDealers
+[{"id": 1, "city": "El Paso", "state": "Texas", "st": "TX", "address": "3 Nova Court", "zip": "88563", "lat": 31.6948, "long": -106.3, "short_name": "Holdlamis", "full_name": "Holdlamis Car Dealership"}, {"id": 2, "city": "Minneapolis", "state": "Minnesota", "st": "MN", "address": "6337 Butternut Crossing"}]
+
+Task 10: getdealerbyid
+curl.exe -s http://localhost:3030/fetchDealer/1
+[{"id": 1, "city": "El Paso", "state": "Texas", "st": "TX", "address": "3 Nova Court", "zip": "88563", "lat": 31.6948, "long": -106.3, "short_name": "Holdlamis", "full_name": "Holdlamis Car Dealership"}]
+
+Task 11: getdealersbyState
+curl.exe -s http://localhost:3030/fetchDealers/Texas
+[{"id": 1, "city": "El Paso", "state": "Texas", "st": "TX", "address": "3 Nova Court", "zip": "88563", "lat": 31.6948, "long": -106.3, "short_name": "Holdlamis", "full_name": "Holdlamis Car Dealership"}]
+
+Task 14 & 15: getallcarmakes
+curl.exe -s http://127.0.0.1:8000/djangoapp/get_cars
+{"CarModels": [{"CarModel": "Pathfinder", "CarMake": "NISSAN"}, {"CarModel": "Qashqai", "CarMake": "NISSAN"}, {"CarModel": "XTRAIL", "CarMake": "NISSAN"}, {"CarModel": "A-Class", "CarMake": "Mercedes"}, {"CarModel": "C-Class", "CarMake": "Mercedes"}, {"CarModel": "E-Class", "CarMake": "Mercedes"}, {"CarModel": "A4", "CarMake": "Audi"}, {"CarModel": "A5", "CarMake": "Audi"}, {"CarModel": "A6", "CarMake": "Audi"}, {"CarModel": "Sorrento", "CarMake": "Kia"}, {"CarModel": "Carnival", "CarMake": "Kia"}, {"CarModel": "Cerato", "CarMake": "Kia"}, {"CarModel": "Corolla", "CarMake": "Toyota"}, {"CarModel": "Camry", "CarMake": "Toyota"}, {"CarModel": "Kluger", "CarMake": "Toyota"}]}
+
+Task 16: analyzereview
+curl.exe -s http://127.0.0.1:5050/analyze/Total%20grid-enabled%20service-desk
+{"sentiment": "neutral"}

@@ -1,0 +1,3 @@
+GitHub Repository: https://github.com/pkunakachiri2001/xrwvm-fullstack_developer_capstone.git
+README.md: https://github.com/pkunakachiri2001/xrwvm-fullstack_developer_capstone/blob/main/README.md
+deploymentURL: https://<your_code_engine_domain>.appdomain.cloud

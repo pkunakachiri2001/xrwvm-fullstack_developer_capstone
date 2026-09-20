@@ -1,0 +1,22 @@
+Task 2: Django server startup
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 20, 2026 - 16:10:00
+Django version 3.2.5, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Task 23: GitHub Actions CI/CD run
+Run actions/checkout@v2
+Run actions/setup-python@v2
+Run cd server
+  python -m pip install --upgrade pip
+  if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+Successfully installed pip-23.2.1
+Requirement already satisfied: Django==3.2.5 in /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages
+Run cd server
+  pip install flake8
+  flake8 .
+0 errors found
